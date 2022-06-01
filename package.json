@@ -1,0 +1,40 @@
+{
+  "name": "@kaliber/sanity-plugin-vimeo",
+  "version": "0.0.0",
+  "keywords": [
+    "sanity",
+    "sanity-plugin",
+    "vimeo"
+  ],
+  "license": "MIT",
+  "main": "lib/vimeo.js",
+  "files": [
+    "src/**",
+    "lib/**",
+    "sanity.json",
+    "LICENCE",
+    "package.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "sanipack build",
+    "watch": "sanipack build --watch",
+    "verify": "sanipack verify",
+    "prepublishOnly": "sanipack build && sanipack verify",
+    "prepare": "[ -f scripts/addPeerDependencies.js ] && node scripts/addPeerDependencies.js"
+  },
+  "peerDependencies": {
+    "classnames": "^2.3.1",
+    "react": "^18.1.0",
+    "react-icons": "^4.4.0"
+  },
+  "devDependencies": {
+    "sanipack": "^2.1.0"
+  },
+  "dependencies": {
+    "vimeo": "^2.1.1"
+  }
+}
